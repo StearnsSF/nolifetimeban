@@ -1,9 +1,17 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Stop the Lifetime Ban - Protect voter rights in San Francisco. Let voters decide, not City Hall politicians.">
+    <meta property="og:title" content="Stop the Lifetime Ban">
+    <meta property="og:description" content="Let voters decide – not City Hall politicians">
+    <meta property="og:url" content="https://www.nolifetimeban.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Stop the Lifetime Ban">
+    <meta name="twitter:description" content="Let voters decide – not City Hall politicians">
     <title>Stop the Lifetime Ban | San Francisco</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Special+Elite&display=swap" rel="stylesheet">
     <style>
@@ -556,7 +564,7 @@
             <h2 class="cta-title">San Francisco has a proud tradition of defending democracy.<br>Let's do it again by rejecting the lifetime ban.</h2>
             <div class="cta-buttons">
                 <a href="#" class="btn btn-primary btn-disabled" onclick="return false;">Donate (Coming Soon)</a>
-                <a href="https://twitter.com/intent/tweet?text=Stop%20the%20Lifetime%20Ban%20%E2%80%93%20Let%20voters%20decide%2C%20not%20City%20Hall%20politicians" target="_blank" class="btn btn-secondary">Share This</a>
+                <button onclick="shareContent()" class="btn btn-secondary">Share This</button>
             </div>
         </div>
     </section>
@@ -598,6 +606,38 @@
             if (firstAccordion) {
                 firstAccordion.click();
             }
+        }
+        
+        // Share functionality with native share API
+        async function shareContent() {
+            const shareData = {
+                title: 'Stop the Lifetime Ban',
+                text: 'Stop the Lifetime Ban – Let voters decide, not City Hall politicians.',
+                url: 'https://www.nolifetimeban.com'
+            };
+            
+            // Check if native share is supported (mobile devices)
+            if (navigator.share) {
+                try {
+                    await navigator.share(shareData);
+                } catch (err) {
+                    // User cancelled or error occurred
+                    if (err.name !== 'AbortError') {
+                        console.log('Error sharing:', err);
+                        fallbackShare();
+                    }
+                }
+            } else {
+                // Fallback to Twitter for desktop
+                fallbackShare();
+            }
+        }
+        
+        function fallbackShare() {
+            const text = encodeURIComponent('Stop the Lifetime Ban – Let voters decide, not City Hall politicians.');
+            const url = encodeURIComponent('https://www.nolifetimeban.com');
+            const twitterUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}`;
+            window.open(twitterUrl, '_blank');
         }
     </script>
 </body>
