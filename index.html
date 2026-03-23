@@ -64,7 +64,28 @@
             letter-spacing: 2px;
             margin-bottom: 20px;
         }
-        
+        /* Donate button in header */
+          .header-donate {
+              position: fixed;
+              top: 20px;
+              right: 20px;
+              z-index: 1000;
+              background: #d32f2f;
+              color: white;
+              padding: 12px 24px;
+              border-radius: 8px;
+              text-decoration: none;
+              font-weight: 700;
+              font-size: 16px;
+              box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+              transition: all 0.3s;
+          }
+
+          .header-donate:hover {
+              background: #b71c1c;
+              transform: translateY(-2px);
+              box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+          }
         .stamp-container {
             display: inline-block;
             position: relative;
@@ -420,6 +441,12 @@
     </style>
 </head>
 <body>
+    <body>
+    <!-- Donate Button in Header -->
+    <a href="https://secure.actblue.com/donate/no-lifetime-ban-1?refcode=directory" target="_blank" class="header-donate">Donate</a>
+    
+    <!-- Hero Section -->
+    <div class="hero">
     <!-- Hero Section -->
     <div class="hero">
         <div class="hero-overlay"></div>
