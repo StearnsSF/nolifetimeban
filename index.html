@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stop the Lifetime Ban - Protect voter rights in San Francisco. Let voters decide, not City Hall politicians.">
+    <meta property="og:title" content="Stop the Lifetime Ban">
+    <meta property="og:description" content="Let voters decide – not City Hall politicians">
+    <meta property="og:url" content="https://www.nolifetimeban.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Stop the Lifetime Ban">
+    <meta name="twitter:description" content="Let voters decide – not City Hall politicians">
+    <title>Stop the Lifetime Ban | San Francisco</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Special+Elite&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 70vh;
+            background-image: url('city_hall.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            padding: 40px 20px;
+        }
+        
+        .hero-title {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: clamp(36px, 8vw, 64px);
+            font-weight: 800;
+            text-shadow: 3px 3px 10px rgba(0,0,0,0.9);
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+        /* Donate button in header */
+          .header-donate {
+              position: fixed;
+              top: 20px;
+              right: 20px;
+              z-index: 1000;
+              background: #d32f2f;
+              color: white;
+              padding: 12px 24px;
+              border-radius: 8px;
+              text-decoration: none;
+              font-weight: 700;
+              font-size: 16px;
+              box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+              transition: all 0.3s;
+          }
+
+          .header-donate:hover {
+              background: #b71c1c;
+              transform: translateY(-2px);
+              box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+          }
+        .stamp-container {
+            display: inline-block;
+            position: relative;
+            margin: 20px 0;
+            transform: rotate(-3deg);
+            animation: stamp-in 0.5s ease-out;
+        }
+        
+        @keyframes stamp-in {
+            0% {
+                transform: rotate(-3deg) scale(0.8);
+                opacity: 0;
+            }
+            100% {
+                transform: rotate(-3deg) scale(1);
+                opacity: 1;
+            }
+        }
+        
+        .stamp {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 8px solid #ff3333;
+            border-radius: 12px;
+            padding: 20px 35px;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            position: relative;
+        }
+        
+        .stamp::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border: 2px dashed rgba(255, 51, 51, 0.6);
+            border-radius: 10px;
+            pointer-events: none;
+        }
+        
+        .stamp-text {
+            font-family: 'Special Elite', 'Courier New', monospace;
+            font-size: clamp(40px, 10vw, 80px);
+            font-weight: 800;
+            color: #cc0000;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+            letter-spacing: 4px;
+            line-height: 1;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+        
+        .hero-subtitle {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: clamp(20px, 4.5vw, 32px);
+            font-weight: 600;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
+            margin-top: 25px;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 40px 0;
+        }
+        
+        .section-title {
+            font-size: clamp(24px, 5vw, 32px);
+            font-weight: 700;
+            color: #d32f2f;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        /* Quotes Section */
+        .quotes-section {
+            background: #f8f9fa;
+            padding: 30px 0;
+        }
+        
+        .quotes-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 768px) {
+            .quotes-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+            }
+        }
+        
+        .quote-card {
+            text-align: center;
+            padding: 15px;
+        }
+        
+        .quote-photo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .quote-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .quote-text {
+            font-size: 16px;
+            font-style: italic;
+            font-weight: 600;
+            color: #d32f2f;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        
+        .quote-attribution {
+            font-size: 14px;
+            color: #555;
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: white;
+            padding: 30px 0;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
+            color: white;
+            padding: 50px 30px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 8px 24px rgba(211, 47, 47, 0.3);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .stat-number {
+            font-size: clamp(60px, 12vw, 120px);
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .stat-text {
+            font-size: clamp(18px, 3vw, 24px);
+            font-weight: 600;
+            line-height: 1.4;
+        }
+        
+        /* Accordion Section */
+        .accordion-section {
+            background: #f8f9fa;
+            padding: 30px 0;
+        }
+        
+        .accordion {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .accordion-item {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .accordion-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 25px;
+            cursor: pointer;
+            background: white;
+            transition: background 0.3s;
+        }
+        
+        .accordion-header:hover {
+            background: #f8f9fa;
+        }
+        
+        .accordion-header.active {
+            background: #f8f9fa;
+        }
+        
+        .accordion-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #d32f2f;
+            flex: 1;
+        }
+        
+        .accordion-icon {
+            font-size: 24px;
+            font-weight: 700;
+            color: #d32f2f;
+            transition: transform 0.3s;
+        }
+        
+        .accordion-header.active .accordion-icon {
+            transform: rotate(45deg);
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .accordion-content.active {
+            max-height: 500px;
+        }
+        
+        .accordion-body {
+            padding: 0 25px 25px 25px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        .accordion-body strong {
+            color: #000;
+        }
+        
+        /* Desktop: Always show accordion content */
+        @media (min-width: 992px) {
+            .accordion-content {
+                max-height: none !important;
+            }
+            
+            .accordion-header {
+                cursor: default;
+            }
+            
+            .accordion-icon {
+                display: none;
+            }
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        
+        .cta-title {
+            font-size: clamp(24px, 5vw, 36px);
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 600px) {
+            .cta-buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 16px 40px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: #d32f2f;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #b71c1c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(211, 47, 47, 0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: #2c3e50;
+        }
+        
+        .btn-disabled {
+            background: #666;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+        
+        .btn-disabled:hover {
+            transform: none;
+            box-shadow: none;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        footer a {
+            color: #ff3333;
+            text-decoration: underline;
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Donate Button in Header -->
+    <a href="https://secure.actblue.com/donate/no-lifetime-ban-1?refcode=directory" target="_blank" class="header-donate">Donate</a>
+    
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">STOP THE</h1>
+            <div class="stamp-container">
+                <div class="stamp">
+                    <div class="stamp-text">LIFETIME BAN</div>
+                </div>
+            </div>
+            <p class="hero-subtitle">Let voters decide – not City Hall politicians</p>
+        </div>
+    </div>
+
+    <!-- Quotes Section -->
+    <section class="quotes-section">
+        <div class="container">
+            <div class="quotes-grid">
+                <div class="quote-card">
+                    <div class="quote-photo">
+                        <img src="jerry_brown.jpg" alt="Jerry Brown">
+                    </div>
+                    <p class="quote-text">"A lifetime ban is a bad idea"</p>
+                    <p class="quote-attribution">— former Governor<br>Jerry Brown</p>
+                </div>
+                
+                <div class="quote-card">
+                    <div class="quote-photo">
+                        <img src="art_agnos.jpg" alt="Art Agnos">
+                    </div>
+                    <p class="quote-text">"A disservice to our democracy"</p>
+                    <p class="quote-attribution">— former Mayor<br>Art Agnos</p>
+                </div>
+                
+                <div class="quote-card">
+                    <div class="quote-photo">
+                        <img src="Solomon_Susan.jpg" alt="Susan Solomon">
+                    </div>
+                    <p class="quote-text">"Divisive and the wrong priority"</p>
+                    <p class="quote-attribution">— College Board Trustee<br>Susan Solomon</p>
+                </div>
+                
+                <div class="quote-card">
+                    <div class="quote-photo">
+                        <img src="willie_brown.jpg" alt="Willie Brown">
+                    </div>
+                    <p class="quote-text">"A solution in search of a problem"</p>
+                    <p class="quote-attribution">— former Mayor<br>Willie Brown</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stat-card">
+                <div class="stat-number">71%</div>
+                <div class="stat-text">of the most populous American cities with term limits don't have lifetime bans</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accordion/Info Section -->
+    <section class="accordion-section">
+        <div class="container">
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span class="accordion-title">Divisive and the Wrong Priority</span>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <strong>Politicians in City Hall are dividing San Francisco and taking away our rights.</strong> Instead of working for affordability, they are prioritizing a lifetime term limits ban. They would ban leaders like Jerry Brown, who served as Governor in the 1970's and then returned after a lifetime of experience to serve California again. It's divisive and the wrong priority.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span class="accordion-title">Solution Looking for a Problem</span>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <strong>They call it "closing a loophole." That's rubbish.</strong> Only one San Francisco leader has ever returned to serve again. As Governor Brown says, "it is rare for an elected official to serve, leave office, pursue other work, and then decide to run again." We shouldn't gut the San Francisco Charter for a "loophole" that has occurred exactly once.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span class="accordion-title">New and Young Leaders Are Already Emerging</span>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <strong>In 2024, we elected a new Mayor and 4 of 6 elected Supervisors had never held office.</strong> Voters are already making change happen, and it should be voters – not City Hall incumbent politicians – who decide who serves as our leaders.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span class="accordion-title">Extreme and Anti-Democratic</span>
+                        <span class="accordion-icon">+</span>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <strong>71% of the most populous American cities with term limits don't have lifetime bans.</strong> In California, just 2 cities – both in deep red, Republican counties – have a lifetime ban. That's because a lifetime ban is both extreme and anti-democratic.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Take Action</h2>
+            <div class="cta-buttons">
+                <a href="https://secure.actblue.com/donate/no-lifetime-ban-1?refcode=directory" target="_blank" class="btn btn-primary">Donate</a>
+                <button class="btn btn-secondary" onclick="shareContent()">Share</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Ad paid for by Stop the Lifetime Ban.<br>
+            Financial disclosures are available at <a href="https://sfethics.org" target="_blank">sfethics.org</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Accordion functionality
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', function() {
+                // Only work on mobile
+                if (window.innerWidth < 992) {
+                    const item = this.parentElement;
+                    const content = item.querySelector('.accordion-content');
+                    const isActive = this.classList.contains('active');
+                    
+                    // Close all accordions
+                    document.querySelectorAll('.accordion-header').forEach(h => {
+                        h.classList.remove('active');
+                    });
+                    document.querySelectorAll('.accordion-content').forEach(c => {
+                        c.classList.remove('active');
+                    });
+                    
+                    // Open clicked accordion if it wasn't active
+                    if (!isActive) {
+                        this.classList.add('active');
+                        content.classList.add('active');
+                    }
+                }
+            });
+        });
+
+        // Share functionality
+        async function shareContent() {
+            const shareData = {
+                title: 'Stop the Lifetime Ban',
+                text: 'Stop the Lifetime Ban – Let voters decide, not City Hall politicians.',
+                url: 'https://www.nolifetimeban.com'
+            };
+
+            try {
+                if (navigator.share) {
+                    await navigator.share(shareData);
+                } else {
+                    // Fallback to Twitter
+                    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareData.text)}&url=${encodeURIComponent(shareData.url)}`;
+                    window.open(twitterUrl, '_blank');
+                }
+            } catch (err) {
+                console.log('Share cancelled or failed');
+            }
+        }
+    </script>
+</body>
+</html>
