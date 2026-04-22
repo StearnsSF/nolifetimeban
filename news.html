@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Labor unions, democratic clubs, and community leaders who oppose Prop B's lifetime term limit ban in San Francisco">
-    <meta name="keywords" content="Prop B endorsements, SF Labor Council, Harvey Milk Club, Jerry Brown, Willie Brown, Art Agnos, No on B supporters">
-    <title>Endorsements - No on B | Labor Unions & Community Leaders Oppose Prop B</title>
+    <meta name="description" content="Latest news and press coverage about the campaign to reject Prop B's lifetime ban in San Francisco">
+    <meta name="keywords" content="Prop B news, San Francisco term limits, Jerry Brown opposition, Prop B coverage">
+    <title>News - No on B | San Francisco Prop B Coverage</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
@@ -65,7 +65,7 @@
         
         /* Container */
         .container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 60px 20px;
         }
@@ -89,48 +89,64 @@
             font-weight: 600;
         }
         
-        /* Endorsement Grid */
-        .endorsements-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 40px;
+        /* News Articles */
+        .news-article {
+            background: #f8f9fa;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            border-left: 5px solid #d32f2f;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
         
-        @media (min-width: 768px) {
-            .endorsements-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 50px;
-            }
+        .news-article:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
         }
         
-        .endorsement-column h2 {
+        .news-date {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .news-title {
             font-size: 24px;
             font-weight: 700;
             color: #2c3e50;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #d32f2f;
+            margin-bottom: 10px;
         }
         
-        .endorsement-list {
-            list-style: none;
-        }
-        
-        .endorsement-list li {
-            padding: 10px 0;
+        .news-source {
             font-size: 16px;
-            color: #333;
-            line-height: 1.6;
+            font-weight: 600;
+            color: #d32f2f;
+            margin-bottom: 15px;
         }
         
-        .endorsement-list li::before {
-            content: "✓";
-            color: #d32f2f;
-            font-weight: bold;
+        .news-excerpt {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .news-link {
             display: inline-block;
-            width: 1.5em;
-            margin-left: -1.5em;
-            padding-right: 0.5em;
+            background: #d32f2f;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .news-link:hover {
+            background: #b71c1c;
+            transform: translateX(3px);
         }
         
         /* Footer */
@@ -163,61 +179,42 @@
     <!-- Main Content -->
     <div class="container">
         <div class="page-header">
-            <h1 class="page-title">Who Opposes Prop B</h1>
-            <p class="page-subtitle">Labor unions, democratic clubs, and community leaders stand together</p>
+            <h1 class="page-title">News & Press Coverage</h1>
+            <p class="page-subtitle">Latest coverage of the No on B campaign</p>
         </div>
 
-        <div class="endorsements-grid">
-            <!-- Organizations Column -->
-            <div class="endorsement-column">
-                <h2>Organizations</h2>
-                <ul class="endorsement-list">
-                    <li>San Francisco Labor Council</li>
-                    <li>UNITE HERE! Local 2</li>
-                    <li>San Francisco Firefighters Local 798</li>
-                    <li>ILWU - IBU</li>
-                    <li>ILWU - Local 10</li>
-                    <li>Affordable Housing Alliance</li>
-                    <li>Coalition for San Francisco Neighborhoods</li>
-                    <li>League of Pissed Off Voters</li>
-                    <li>San Francisco Planning & Urban Research Assoc. (SPUR)</li>
-                    <li>San Francisco Tenants Union</li>
-                    <li>Bernal Heights Democratic Club</li>
-                    <li>District 11 Democratic Club</li>
-                    <li>Harvey Milk LGBTQ Democratic Club</li>
-                    <li>Potrero Hill Democratic Club</li>
-                    <li>Richmond District Democratic Club</li>
-                </ul>
-            </div>
+        <!-- News Article 1 -->
+        <article class="news-article">
+            <div class="news-date">January 26, 2026</div>
+            <h2 class="news-title">Jerry Brown Calls San Francisco Term-Limit Measure "Trumpian"</h2>
+            <div class="news-source">San Francisco Standard</div>
+            <p class="news-excerpt">
+                Former California Governor Jerry Brown is condemning a proposed San Francisco ballot measure that would impose lifetime term limits on city supervisors and mayors, calling it "Trumpian" and anti-democratic. Brown, who served as California's youngest and oldest governor across non-consecutive terms, argues the measure would strip voters of their right to choose experienced leaders.
+            </p>
+            <a href="https://sfstandard.com/2026/01/26/jerry-brown-term-limit/" target="_blank" class="news-link" rel="noopener">Read Full Article →</a>
+        </article>
 
-            <!-- Elected & Community Leaders Column -->
-            <div class="endorsement-column">
-                <h2>Elected & Community Leaders</h2>
-                <ul class="endorsement-list">
-                    <li>Governor Jerry Brown (ret)</li>
-                    <li>Mayor Art Agnos (ret)</li>
-                    <li>Mayor Willie Brown (ret)</li>
-                    <li>State Senator Mark Leno (ret)</li>
-                    <li>Assemblymember Tom Ammiano (ret)</li>
-                    <li>Judge Hon. Ellen Chaitin (ret)</li>
-                    <li>Judge Hon. Lillian K. Sing (ret)</li>
-                    <li>Judge Hon. Julie Tang (ret)</li>
-                    <li>Judge Quentin Kopp (ret)</li>
-                    <li>Supervisor Michela Alioto-Pier (ret)</li>
-                    <li>Supervisor Connie Chan</li>
-                    <li>Supervisor Bevan Dufty (ret)</li>
-                    <li>Supervisor Sandra Lee Fewer (ret)</li>
-                    <li>Supervisor Aaron Peskin (ret)</li>
-                    <li>Supervisor Norman Yee (ret)</li>
-                    <li>Community College Trustee Susan Solomon</li>
-                    <li>Youth Commissioner Rosa Chen (ret)</li>
-                    <li>Youth Commission Chair Leah Lacroix (ret)</li>
-                    <li>Youth Commissioner Lisa Yu (ret)</li>
-                    <li>SFPD Commander Rich Correia (ret)</li>
-                    <li>Community Leader Stephen Torres</li>
-                </ul>
-            </div>
-        </div>
+        <!-- News Article 2 -->
+        <article class="news-article">
+            <div class="news-date">December 17, 2025</div>
+            <h2 class="news-title">Former San Francisco Mayors Oppose Lifetime Term Limits Ban</h2>
+            <div class="news-source">San Francisco Chronicle</div>
+            <p class="news-excerpt">
+                Former Mayors Willie Brown and Art Agnos join Governor Jerry Brown in opposing Proposition B, arguing that lifetime term limits are extreme and undemocratic. In an op-ed, they write that San Francisco voters should have the right to choose experienced leaders if they wish, and that only one leader has ever returned to serve after the required break in the city's modern history.
+            </p>
+            <a href="https://www.sfchronicle.com/opinion/openforum/article/term-limit-san-francisco-mayor-supervisor-21329946.php" target="_blank" class="news-link" rel="noopener">Read Full Article →</a>
+        </article>
+
+        <!-- News Article 3 -->
+        <article class="news-article">
+            <div class="news-date">January 2026</div>
+            <h2 class="news-title">Old Voter Intent Focus of Prop B's Lifetime Term Limits</h2>
+            <div class="news-source">San Francisco Examiner</div>
+            <p class="news-excerpt">
+                The debate over Proposition B centers on conflicting interpretations of what San Francisco voters intended when they approved term limits in 1990. Opponents argue the measure goes far beyond the original intent and solves a problem that doesn't exist, noting that only one city leader has ever returned to office after the required four-year break.
+            </p>
+            <a href="https://www.sfexaminer.com/news/politics/old-voter-intent-focus-of-prop-bs-lifetime-term-limits/article_59e5cb8c-5430-45ac-8ad6-125940044db9.html" target="_blank" class="news-link" rel="noopener">Read Full Article →</a>
+        </article>
     </div>
 
     <!-- Footer -->
